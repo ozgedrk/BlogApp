@@ -4,19 +4,19 @@ using BlogApp.Entity;
 
 namespace BlogApp.Data.Concrete
 {
-    public class EfPostRepository : IPostRepository
+    public class EfTagRepository : ITagRepository
     {
         private readonly BlogContext _context;
 
-        public EfPostRepository(BlogContext context)
+        public EfTagRepository(BlogContext context)
         {
             _context = context;
         }
-        public IQueryable<Post> Posts => _context.Posts;
+        public IQueryable<Tag> Tags => _context.Tags;
 
-        public void CreatePost(Post post)
+        public void CreatePost(Tag tag)
         {
-            _context.Posts.Add(post);
+            _context.Tags.Add(tag);
             _context.SaveChanges();
         }
     }
