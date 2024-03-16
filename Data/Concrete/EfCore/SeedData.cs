@@ -5,6 +5,7 @@ namespace BlogApp.Data.Concrete.EfCore
 {
     public class SeedData
     {
+
         public static void TestVerileriniDoldur(IApplicationBuilder app)
         {
             var context = app.ApplicationServices.CreateScope().ServiceProvider.GetService<BlogContext>();
@@ -30,8 +31,8 @@ namespace BlogApp.Data.Concrete.EfCore
             if (!context.Users.Any())
             {
                 context.Users.AddRange(
-                    new User { UserName = "ahmetkaya", Image = "1.jpg" },
-                    new User { UserName = "diclebahceli", Image = "2.jpg" }
+                    new User { UserName = "ahmetkaya", Image = "1.jpg", Name = "Ahmet Kaya", Email = "info@ahmetkaya.com", Password = "123456" },
+                    new User { UserName = "ozgedirik", Name = "Dicle Bahçeli", Email = "info@ozgedirik.com", Password = "123456", Image = "2.jpg" }
                 );
                 context.SaveChanges();
             }
