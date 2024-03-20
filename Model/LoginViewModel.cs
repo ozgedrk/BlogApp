@@ -4,6 +4,7 @@ namespace BlogApp.Model
 {
     public class LoginViewModel
     {
+
         [Required]
         [EmailAddress]
         [Display(Name = "Eposta")]

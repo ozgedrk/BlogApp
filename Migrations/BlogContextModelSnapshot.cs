@@ -53,6 +53,9 @@ namespace BlogApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Image")
                         .HasColumnType("TEXT");
 

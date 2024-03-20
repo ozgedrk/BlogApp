@@ -5,7 +5,6 @@ namespace BlogApp.Data.Concrete.EfCore
 {
     public class SeedData
     {
-
         public static void TestVerileriniDoldur(IApplicationBuilder app)
         {
             var context = app.ApplicationServices.CreateScope().ServiceProvider.GetService<BlogContext>();
@@ -32,7 +31,7 @@ namespace BlogApp.Data.Concrete.EfCore
             {
                 context.Users.AddRange(
                     new User { UserName = "ahmetkaya", Image = "1.jpg", Name = "Ahmet Kaya", Email = "info@ahmetkaya.com", Password = "123456" },
-                    new User { UserName = "ozgedirik", Name = "Dicle Bahçeli", Email = "info@ozgedirik.com", Password = "123456", Image = "2.jpg" }
+                    new User { UserName = "diclebahceli", Name = "Dicle Bahçeli", Email = "info@diclebahceli.com", Password = "123456", Image = "2.jpg" }
                 );
                 context.SaveChanges();
             }
@@ -42,6 +41,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post
                     {
                         Title = "Backend Bootcamp",
+                        Description = "Backend dersleri işlenecek",
                         Content = "Backend dersleri işlenecek",
                         Url = "backend-bootcamp",
                         Image = "1.jpeg",
@@ -57,6 +57,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post
                     {
                         Title = "Unity Game Tutorial",
+                        Description = "Unity ile oyun yapımı",
                         Content = "Unity ile oyun yapımı",
                         Url = "unity-game-tutorial",
                         Image = "2.png",
@@ -68,6 +69,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post
                     {
                         Title = "Asp.net Core Tutorial",
+                        Description = "Web sitesi geliştireceğiz",
                         Content = "Web sitesi geliştireceğiz",
                         Url = "asp-net-core",
                         Image = "3.png",
@@ -79,6 +81,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post
                     {
                         Title = "React Bootcamp",
+                        Description = "Web sitesi geliştireceğiz",
                         Content = "Web sitesi geliştireceğiz",
                         Url = "react",
                         Image = "3.png",
